@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctopusSamples.OctoPetShop.Web", "OctopusSamples.OctoPetShop.Web\OctopusSamples.OctoPetShop.Web.csproj", "{6D02010B-BC6C-4D46-ADAB-5A1581DBCFC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctopusSamples.OctoPetShop.ProductService", "OctopusSamples.OctoPetShop.ProductService\OctopusSamples.OctoPetShop.ProductService.csproj", "{9B82848D-5ADB-4B48-89E3-DE1EEE02C6C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctopusSamples.OctoPetShop.ShoppingCartService", "OctopusSamples.OctoPetShop.ShoppingCartService\OctopusSamples.OctoPetShop.ShoppingCartService.csproj", "{F1D9A293-5967-40DE-B88C-FEE6C831E28B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctopusSamples.OctoPetShop.Database", "OctopusSamples.OctoPetShop.Database\OctopusSamples.OctoPetShop.Database.csproj", "{8A23BBDA-EA46-4079-B2E2-F70BCBD9EDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctopusSamples.OctoPetShop.ProductService.Tests", "OctopusSamples.OctoPetShop.ProductService.Tests\OctopusSamples.OctoPetShop.ProductService.Tests.csproj", "{B70F1D27-31F0-4CBF-8CD7-C8AEA01BB142}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D02010B-BC6C-4D46-ADAB-5A1581DBCFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D02010B-BC6C-4D46-ADAB-5A1581DBCFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D02010B-BC6C-4D46-ADAB-5A1581DBCFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D02010B-BC6C-4D46-ADAB-5A1581DBCFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B82848D-5ADB-4B48-89E3-DE1EEE02C6C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B82848D-5ADB-4B48-89E3-DE1EEE02C6C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B82848D-5ADB-4B48-89E3-DE1EEE02C6C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B82848D-5ADB-4B48-89E3-DE1EEE02C6C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D9A293-5967-40DE-B88C-FEE6C831E28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D9A293-5967-40DE-B88C-FEE6C831E28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D9A293-5967-40DE-B88C-FEE6C831E28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D9A293-5967-40DE-B88C-FEE6C831E28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A23BBDA-EA46-4079-B2E2-F70BCBD9EDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A23BBDA-EA46-4079-B2E2-F70BCBD9EDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A23BBDA-EA46-4079-B2E2-F70BCBD9EDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A23BBDA-EA46-4079-B2E2-F70BCBD9EDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70F1D27-31F0-4CBF-8CD7-C8AEA01BB142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70F1D27-31F0-4CBF-8CD7-C8AEA01BB142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70F1D27-31F0-4CBF-8CD7-C8AEA01BB142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70F1D27-31F0-4CBF-8CD7-C8AEA01BB142}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {498C2354-8DF0-4C2A-9662-1F7BDAE0F62B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+name: Question
+description: Use this form to raise a question regarding this. 
+title: "[Question]: "
+labels: ["question"]
+assignees:
+  - weeyin83
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: Question
+    attributes:
+      label: Question
+      description: What is your question?  Please provide as much detail as possible. 
+      render: shell

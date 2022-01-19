@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model List<ProductViewModel> 
+
+<h2>Welcome to the Octo Pet Shop!</h2>
+
+<p>The Octo Pet Shop has a great selection of your favourite pet and pet products. Browse our most popular products below. </p>
+
+@{
+
+    int index = 0;
+
+}
+
+@while (index < @Model.Count)
+ {
+     
+     <div class="row">
+     
+     @for (int i = index; i < index + 3; i++)
+     {
+         var product = @Model.ElementAtOrDefault(i);
+ 
+         if (product == null)
+         {
+             break;
+         }
+         
+         <div class="col-md-3">
+ 
+             <div class="panel panel-default">
+                 <div class="panel-body">
+                     <div> <span class="pull-left"><strong>@product.Name</strong></span> <span class="pull-right"><strong>@product.PriceString</strong></span> </div>
+                     <br/>
+                     <div><p style="color: gray; font-size: smaller">@product.Description</p></div>
+                     <img class="img-rounded img-responsive center-block" src="@product.ImageUrl" width="200" height="200"/>
+             
+                     <form asp-controller="Home" asp-action="AddToCart" asp-route-id="@product.Id" method="post">
+                         <button type="submit" class="btn btn-primary">Add to Cart</button>
+                     </form>
+                     
+                 </div>
+             </div>
+     
+         </div>
+ 
+         index++;
+     }
+ 
+     </div>
+         
+ }
+
+    
+
+
