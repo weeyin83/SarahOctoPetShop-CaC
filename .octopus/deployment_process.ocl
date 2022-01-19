@@ -42,6 +42,39 @@ step "Deploy database" {
     }
 }
 
+step "Deploy front web" {
+    properties = {
+        Octopus.Action.TargetRoles = "OctoPetShop-Web"
+    }
+    start_trigger = "StartWithPrevious"
+
+    action {
+        action_type = "Octopus.AzureWebApp"
+        properties = {
+            Octopus.Action.Azure.UseChecksum = "False"
+            Octopus.Action.EnabledFeatures = "Octopus.Features.JsonConfigurationVariables,Octopus.Features.ConfigurationVariables,Octopus.Features.ConfigurationTransforms"
+            Octopus.Action.Package.AutomaticallyRunConfigurationTransformationFiles = "True"
+            Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings = "True"
+            Octopus.Action.Package.DownloadOnTentacle = "False"
+            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
+            Octopus.Action.Package.JsonConfigurationVariablesTargets = "appsettings.json"
+            Octopus.Action.Package.PackageId = "OctopusSamples.OctoPetShop.Web"
+            Octopus.Action.RunOnServer = "true"
+            OctopusUseBundledTooling = "False"
+        }
+        worker_pool = "Windows"
+
+        packages {
+            acquisition_location = "Server"
+            feed = "Octopus Server (built-in)"
+            package_id = "OctopusSamples.OctoPetShop.Web"
+            properties = {
+                SelectionMode = "immediate"
+            }
+        }
+    }
+}
+
 step "Deploy product service" {
     properties = {
         Octopus.Action.TargetRoles = "OctoPetShop-Product-Service"
@@ -100,39 +133,6 @@ step "Deploy shopping cart" {
             acquisition_location = "Server"
             feed = "Octopus Server (built-in)"
             package_id = "OctopusSamples.OctoPetShop.ShoppingCartService"
-            properties = {
-                SelectionMode = "immediate"
-            }
-        }
-    }
-}
-
-step "Deploy front web" {
-    properties = {
-        Octopus.Action.TargetRoles = "OctoPetShop-Web"
-    }
-    start_trigger = "StartWithPrevious"
-
-    action {
-        action_type = "Octopus.AzureWebApp"
-        properties = {
-            Octopus.Action.Azure.UseChecksum = "False"
-            Octopus.Action.EnabledFeatures = "Octopus.Features.JsonConfigurationVariables,Octopus.Features.ConfigurationVariables,Octopus.Features.ConfigurationTransforms"
-            Octopus.Action.Package.AutomaticallyRunConfigurationTransformationFiles = "True"
-            Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings = "True"
-            Octopus.Action.Package.DownloadOnTentacle = "False"
-            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
-            Octopus.Action.Package.JsonConfigurationVariablesTargets = "appsettings.json"
-            Octopus.Action.Package.PackageId = "OctopusSamples.OctoPetShop.Web"
-            Octopus.Action.RunOnServer = "true"
-            OctopusUseBundledTooling = "False"
-        }
-        worker_pool = "Windows"
-
-        packages {
-            acquisition_location = "Server"
-            feed = "Octopus Server (built-in)"
-            package_id = "OctopusSamples.OctoPetShop.Web"
             properties = {
                 SelectionMode = "immediate"
             }
